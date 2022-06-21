@@ -14,7 +14,7 @@ router.param("item", function(req, res, next, slug) {
       if (!item) {
         return res.sendStatus(404);
       }
-
+      item.image = "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640";
       req.item = item;
 
       return next();
